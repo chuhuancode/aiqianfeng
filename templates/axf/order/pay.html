@@ -1,0 +1,27 @@
+{% extends 'axf/base/base.html' %}
+{% load staticfiles %}
+
+
+{% block body %}
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+        p {
+            font-size: 30px;
+            position: relative;
+            top: 50px;
+            left: 200px;
+        }
+    </style>
+
+    <img src="/static/base/img/callme.png">
+    <br>
+    <p>来来来，给钱</p>
+    {#    {{ orderid }}#}
+{% endblock %}
+

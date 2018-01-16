@@ -1,0 +1,20 @@
+{% extends 'axf/base/base.html' %}
+{% load staticfiles %}
+
+{% block personResource %}
+    <script type="text/javascript" src="{% static 'base/js/md5.js' %}"></script>
+    <script type="text/javascript" src="{% static 'user/js/login.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <form onsubmit="return check()" action="{% url 'axf:doLogin' %}" method="post">
+    {% csrf_token %}
+     <span>用户名:</span><br>
+        <input type="text" id="login_username" name="username" placeholder="请输入用户名"><br>
+        <span>密码:</span><br>
+        <input type="password" id="login_password" name="password" placeholder="请输入密码"><br>
+        <input type="submit" value="登录">
+    </form>
+{% endblock %}
+
+
